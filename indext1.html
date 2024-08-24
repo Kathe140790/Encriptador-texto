@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="" href="">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./style/nstyle.css">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <main>
+         <!--Encabezado-->
+        <header>
+            <a href="a" rel="">
+            <img src="./imagenes/Logo.png" alt="logo alura">
+            </a> 
+        </header>
+     <!--Principal: se crean dos contenedores (parte 1 y parte 2) y contiene 
+     todo el cuerpo de la pagina donde el usuario va a interactuar-->
+     <section class="parte_1">
+        <input class="textarea"  type="text"  id="textoUsuario"  placeholder="ingresa el texto aqui:"> 
+         <!--placeholder: es el atributo que trae una descipcion y luego al 
+         momento en que el ususario escribe se borra automaticamente -->
+        <div class="encriptador_aviso">
+            <img src="./imagenes/aviso.svg" alt="imagen aviso" class="imgAviso">
+            <p class="informacion" id="informacion">Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="contenedor_botones">
+           
+            <button type="submit" id="botonEncriptado"  value="Encriptar" onclick="return encriptar();" class="boton_encriptar">Encriptar</button>
+            <button type="button" id="botonDesencriptado" value="Desencriptar" class="boton_desencriptar">Desencriptar</button>
+        </div>
+    </section>
+
+    <section class="parte_2">
+           
+        <div class="contenedor_parte2 ">
+            
+            <img class="contenedor_imagen" id="contenedor_imagen" src="./imagenes/Muñeco.png" alt="imagen dibujo">               
+            <h3 class="cont_sub_1 ">Ningún mensaje fue encontrado</h3>
+            <p class="cont_sub_2 " >Ingresa el texto que desees encriptar o desencriptar.</p>            
+        </div>
+        
+        <div class="contenedor_parrafo">
+            <a class="mensajeEncriptado">
+             <textarea class="resultado" name="resultado" id="textoDesencriptado" readonly></textarea>
+             <!--readonly: atributo en el que solo permite leer no es posible 
+             modificar el texto-->   
+             <button type="button" id="botonCopiar" class="boton_copiar" value="Copiar">copiar</button>     
+            </a>
+        </div>
+    
+    </section>
+
+    </main>
+    <footer>
+        <p>Alura-Oracle / Encriptador / Desarrollado por Diana </p>
+    </footer>
+</body>
+<script>
+    var btn = document.querySelector("#botonEncriptado");
+    btn.onclick = encriptar;
+
+    var btn2 = document.querySelector("#botonDesencriptado");
+    btn2.onclick = desencriptar;
+
+    var btn3 = document.querySelector("#botonCopiar");
+    btn3.onclick = copiar;
+
+</script>
+</html>
+
